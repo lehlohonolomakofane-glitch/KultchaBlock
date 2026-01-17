@@ -3,62 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KultchaBloc | Release Your Work</title>
+    <title>KultchaBloc | ArtMerchants</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #fdfdfd; 
+            background-color: #ffffff; 
             color: #1a1a1a;
+            overflow-x: hidden;
         }
         .serif-creative { font-family: 'Instrument Serif', serif; }
         
-        .upload-zone {
-            border: 2px dashed #e5e7eb;
-            transition: all 0.3s ease;
-        }
-        .upload-zone:hover {
-            border-color: #f97316;
-            background: rgba(249, 115, 22, 0.02);
+        /* Vibrant artistic background washes */
+        .bg-artist-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 90% 10%, rgba(255, 120, 150, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 10% 80%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.08) 0%, transparent 60%);
+            z-index: -1;
         }
 
-        .type-pill:checked + label {
-            background-color: #000;
-            color: #fff;
-            border-color: #000;
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        
+        .floating-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-pill {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
     </style>
 </head>
-<body class="pb-28">
+<body class="pb-32">
+    <div class="bg-artist-glow"></div>
 
-    <header class="flex justify-between items-center p-6 bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-black/5">
+    <header class="flex justify-between items-center p-6 sticky top-0 z-50 backdrop-blur-md border-b border-black/5">
         <div class="flex items-center gap-3">
             <div class="bg-black text-white font-black px-2 py-1 rounded-sm text-sm">K9</div>
             <div class="flex flex-col">
                 <h1 class="text-xl font-extrabold tracking-tighter leading-none text-black">KultchaBloc</h1>
-                <span class="text-[10px] text-orange-600 font-bold uppercase tracking-[0.3em] mt-1">ArtMerchants</span>
+                <span class="text-[10px] text-orange-500 font-bold uppercase tracking-[0.3em] mt-1">ArtMerchants</span>
             </div>
         </div>
-        <div class="flex items-center gap-4">
-            <button class="text-xs font-bold uppercase tracking-widest text-gray-400">Save Draft</button>
+        <div class="flex items-center gap-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 hover:text-black cursor-pointer transition-colors"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-orange-400 to-rose-400 border border-white shadow-sm cursor-pointer hover:scale-110 transition-transform"></div>
         </div>
     </header>
 
     <main class="max-w-screen-md mx-auto px-6 pt-10">
         
-        <div class="mb-12">
-            <h2 class="text-xs uppercase tracking-[0.4em] font-bold text-gray-400 mb-4">Creator Studio</h2>
-            <h3 class="text-5xl md:text-7xl font-black leading-[0.9] text-black mb-4">
-                Bring your <br/> 
-                <span class="serif-creative italic text-orange-500">vision</span> to life.
-            </h3>
-            <p class="text-gray-500 text-sm max-w-xs font-medium">List your creative works—from perfumes to beats—on the KultchaBloc marketplace.</p>
+        <div class="mb-14">
+            <p class="text-[10px] uppercase tracking-[0.4em] font-extrabold text-orange-500 mb-4">Curated Creativity</p>
+            <h2 class="text-6xl md:text-8xl font-black tracking-tight leading-[0.85] text-black mb-6">
+                Experience <br/>
+                <span class="serif-creative italic font-light text-indigo-600">the Icons.</span>
+            </h2>
+            <div class="flex gap-4 text-xs font-bold text-gray-500 uppercase tracking-widest">
+                <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Music Drops</span>
+                <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Art Premieres</span>
+            </div>
         </div>
 
-        <form class="space-y-10">
-            <div>
-                <label class="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">Step 1: The Masterpiece</label>
-                <div class="upload-zone rounded-[2.5rem] p-16 text-center cursor-pointer group bg-white shadow-sm">
-                    <div class="bg-orange-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-100 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.
+        <div class="flex gap-3 overflow-x-auto no-scrollbar mb-12 py-2">
+            <button class="category-pill bg-black text-white px-8 py-3 rounded-2xl text-xs font-bold whitespace-nowrap shadow-lg shadow-black/10">All Works</button>
+            <button class="category-pill bg-white border border-black/5 px-8 py-3 rounded-2xl text-xs font-bold whitespace-nowrap text-gray-400 hover:text-black hover:border-black/20 transition-all">Art Gallery</button>
+            <button class="category-pill bg-white border border-black/5 px-8 py-3 rounded-2xl text-xs font-bold whitespace-nowrap text-gray-400 hover:text-black transition-all">Music Vault</button>
+            <button class="category-pill bg-white border border-black/5 px-8 py-3 rounded-2xl text-xs font-bold whitespace-nowrap text-gray-400 hover:text-black transition-all">Apparel</button>
+        </div>
+
+        <div class="flex justify-between items-center mb-8">
+            <h3 class="text-2xl font-black">Trending <span class="text-orange-500 text-4xl leading-none">.</span></h3>
+            <span class="text-[10px] font-black uppercase tracking-widest text-gray-400">Premium Picks</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-8">
+            <div class="group cursor-pointer">
+                <div class="relative aspect-[3/4] rounded-3xl overflow-hidden mb-4 bg-gray-50 shadow-sm transition-all group-hover:shadow-xl group-hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-[9px] font-black uppercase text-black tracking-tighter">Painting</div>
+                </div>
+                <h4 class="text-md font-extrabold text-black group-hover:text-indigo-600 transition-colors">Woman in Red</h4>
+                <p class="text-sm font-medium text-gray-500">$2,500</p>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="relative aspect-[3/4] rounded-3xl overflow-hidden mb-4 bg-gray-50 shadow-sm transition-all group-hover:shadow-xl group-hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1501472312651-726afe119ff1?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-[9px] font-black uppercase text-black tracking-tighter">Digital Art</div>
+                </div>
+                <h4 class="text-md font-extrabold text-black group-hover:text-indigo-600 transition-colors">Abstract Flow</h4>
+                <p class="text-sm font-medium text-gray-500">$1,800</p>
+            </div>
+        </div>
+    </main>
+
+    <nav class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-sm floating-nav rounded-[2.5rem] p-2 flex justify-between items-center z-50">
+        <button class="p-4 text-black transition-transform hover:scale-110"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></button>
+        <button class="p-4 text-gray-400 hover:text-black transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></button>
+        
+        <button class="bg-black text-white p-5 rounded-full -mt-16 shadow-[0_15px_30px_rgba(0,0,0,0.2)] hover:rotate-90 hover:bg-orange-600 transition-all duration-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+
+        <button class="p-4 text-gray-400 hover:text-black transition-all"><svg xmlns="
