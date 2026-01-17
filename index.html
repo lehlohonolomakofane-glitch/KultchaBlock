@@ -3,124 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KultchaBloc | Vibrant Creative Marketplace</title>
+    <title>KultchaBloc | For the Creators</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #0f1115; 
-            color: #ffffff;
+            background-color: #fdfdfd; 
+            color: #1a1a1a;
             overflow-x: hidden;
         }
-        .serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
+        .serif-creative { font-family: 'Instrument Serif', serif; font-size: 1.1em; }
         
-        /* Subtle background glow for vibrancy */
-        .bg-glow {
+        /* Soft, artistic color wash for the background */
+        .bg-artist-wash {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
-                        radial-gradient(circle at 90% 80%, rgba(244, 63, 94, 0.1) 0%, transparent 40%);
+            background: 
+                radial-gradient(circle at 80% 10%, rgba(255, 182, 193, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 10% 90%, rgba(173, 216, 230, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(240, 230, 140, 0.1) 0%, transparent 50%);
             z-index: -1;
         }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        .neo-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
         }
 
         .no-scrollbar::-webkit-scrollbar { display: none; }
     </style>
 </head>
 <body class="pb-28">
-    <div class="bg-glow"></div>
+    <div class="bg-artist-wash"></div>
 
-    <header class="flex justify-between items-center p-6 sticky top-0 z-50 backdrop-blur-xl border-b border-white/10">
-        <div class="flex items-center gap-3">
-            <div class="bg-gradient-to-tr from-indigo-500 to-purple-600 text-white font-extrabold px-2 py-1 rounded-lg text-sm shadow-lg shadow-indigo-500/20">K9</div>
-            <div>
-                <h1 class="text-xl font-extrabold tracking-tighter leading-none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">KultchaBloc</h1>
-                <p class="text-[10px] text-indigo-400 font-bold uppercase tracking-[0.2em]">Creative Marketplace</p>
-            </div>
+    <header class="flex justify-between items-center p-6 sticky top-0 z-50 backdrop-blur-md border-b border-black/5">
+        <div class="flex items-center gap-2">
+            <div class="bg-black text-white font-black px-2 py-1 rounded-sm text-sm">K9</div>
+            <h1 class="text-xl font-extrabold tracking-tighter text-black">KultchaBloc</h1>
         </div>
-        <div class="flex gap-4">
-            <div class="p-2 glass-card rounded-full cursor-pointer hover:bg-white/10 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-            </div>
+        <div class="flex items-center gap-4">
+            <button class="text-sm font-bold border-b-2 border-black">Join as Creator</button>
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-orange-400 to-rose-400 border-2 border-white shadow-sm"></div>
         </div>
     </header>
 
-    <main class="max-w-screen-md mx-auto px-6 pt-8">
+    <main class="max-w-screen-md mx-auto px-6 pt-10">
         
-        <div class="relative overflow-hidden rounded-[2rem] bg-[#1a1c22] border border-white/20 h-72 flex items-center mb-10 group cursor-pointer shadow-2xl">
-            <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-transparent to-rose-500/20 group-hover:opacity-100 transition-opacity duration-500 opacity-50"></div>
-            
-            <div class="relative z-10 pl-8 w-full md:w-2/3">
-                <span class="inline-block bg-indigo-500 text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-md mb-3 shadow-lg shadow-indigo-500/40">Exclusive</span>
-                <h3 class="text-5xl md:text-6xl serif-italic mb-4 text-white drop-shadow-md">the Icons</h3>
-                <p class="text-sm text-gray-300 font-medium max-w-xs">Curated music drops and digital art premieres from global creators.</p>
-            </div>
-            
-            <div class="absolute right-0 top-0 w-1/2 h-full">
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-l from-transparent via-[#1a1c22]/40 to-[#1a1c22]"></div>
-            </div>
+        <div class="mb-12">
+            <h2 class="text-xs uppercase tracking-[0.4em] font-bold text-gray-400 mb-4">Your Canvas Awaits</h2>
+            <h3 class="text-6xl md:text-8xl font-black tracking-tight leading-[0.9] text-black mb-6">
+                Release <br/>
+                <span class="serif-creative italic font-light text-orange-500 underline decoration-1 underline-offset-8">Fearless.</span>
+            </h3>
+            <p class="text-lg text-gray-600 max-w-sm font-medium">
+                The world’s first open marketplace for music, art, and sensory products. Built by creators, for creators.
+            </p>
         </div>
 
-        <div class="flex gap-3 overflow-x-auto no-scrollbar mb-12 py-2">
-            <button class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-3 rounded-2xl text-xs font-bold whitespace-nowrap shadow-lg shadow-indigo-500/30 ring-2 ring-white/20">All Works</button>
-            <button class="glass-card px-8 py-3 rounded-2xl text-xs font-bold whitespace-nowrap text-gray-300 hover:text-white hover:border-white/40 transition-all">Art Gallery</button>
-            <button class="glass-card px-8 py-3 rounded-2xl text-xs font-bold whitespace-nowrap text-gray-300 hover:text-white transition-all">Music Vault</button>
-            <button class="glass-card px-8 py-3 rounded-2xl text-xs font-bold whitespace-nowrap text-gray-300 hover:text-white transition-all">Apparel</button>
-        </div>
-
-        <div class="flex justify-between items-center mb-8">
-            <h3 class="text-2xl font-extrabold tracking-tight">Trending <span class="text-indigo-500">.</span></h3>
-            <div class="flex items-center gap-2">
-                <span class="h-2 w-2 rounded-full bg-rose-500 animate-pulse"></span>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Live Auctions</span>
+        <div class="relative overflow-hidden rounded-[2.5rem] bg-black text-white p-8 mb-16 shadow-2xl shadow-orange-500/20">
+            <div class="relative z-10">
+                <h4 class="text-2xl font-bold mb-2">Start Selling Today</h4>
+                <p class="text-gray-400 text-sm mb-6">Perfumes, Beats, Apparel, or Fine Art. No limits.</p>
+                <button class="bg-white text-black font-black px-8 py-4 rounded-full text-sm hover:scale-105 transition-transform">
+                    Upload Your First Drop
+                </button>
             </div>
+            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-gradient-to-tr from-orange-500 to-purple-600 rounded-full blur-[60px] opacity-60"></div>
         </div>
 
-        <div class="grid grid-cols-2 gap-6 md:gap-8">
+        <div class="flex justify-between items-end mb-8 border-b border-black/5 pb-4">
+            <h3 class="text-2xl font-black">Latest Drops</h3>
+            <button class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-black">View Gallery —></button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div class="group cursor-pointer">
-                <div class="relative aspect-[3/4] rounded-3xl overflow-hidden glass-card mb-4 group-hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] transition-all duration-500">
-                    <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold border border-white/20">Art</div>
+                <div class="relative aspect-square rounded-2xl overflow-hidden mb-6 bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-tighter shadow-sm text-black">Art Gallery</div>
                 </div>
-                <h4 class="text-md font-bold text-white mb-1">Vibrant Flow #01</h4>
-                <div class="flex items-center justify-between">
-                    <p class="text-sm font-bold text-indigo-400">2.50 ETH</p>
-                    <p class="text-[10px] font-semibold text-gray-500 uppercase">Premium</p>
-                </div>
+                <h4 class="text-xl font-extrabold text-black">Luminescence #09</h4>
+                <p class="text-gray-500 font-medium">By Sarah J. • $1,200</p>
             </div>
 
             <div class="group cursor-pointer">
-                <div class="relative aspect-[3/4] rounded-3xl overflow-hidden glass-card mb-4 group-hover:shadow-[0_0_30px_rgba(244,63,94,0.3)] transition-all duration-500">
-                    <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold border border-white/20">Music</div>
+                <div class="relative aspect-square rounded-2xl overflow-hidden mb-6 bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1554047600-77a619691068?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-tighter shadow-sm text-black">Music Vault</div>
                 </div>
-                <h4 class="text-md font-bold text-white mb-1">Sonic Horizon</h4>
-                <div class="flex items-center justify-between">
-                    <p class="text-sm font-bold text-rose-400">1.20 ETH</p>
-                    <p class="text-[10px] font-semibold text-gray-500 uppercase">Lease</p>
-                </div>
+                <h4 class="text-xl font-extrabold text-black">Urban Echo Beats</h4>
+                <p class="text-gray-500 font-medium">By AudioArchitect • $45.00/lease</p>
             </div>
         </div>
     </main>
 
-    <nav class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-sm glass-card rounded-[2rem] p-3 flex justify-between items-center z-50 shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/20">
-        <button class="p-3 text-indigo-400 hover:scale-110 transition"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></button>
-        <button class="p-3 text-gray-500 hover:text-white transition"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></button>
+    <nav class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-black rounded-[2rem] p-2 flex justify-between items-center z-50 shadow-2xl">
+        <button class="p-4 text-white"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></button>
+        <button class="p-4 text-gray-500 hover:text-white transition"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button>
         
-        <button class="bg-gradient-to-tr from-indigo-500 to-purple-600 p-4 rounded-full -mt-14 shadow-[0_10px_25px_rgba(99,102,241,0.5)] border-4 border-[#0f1115] text-white hover:scale-110 active:scale-95 transition-all">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        <button class="bg-white p-4 rounded-full shadow-lg text-black hover:rotate-90 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
         </button>
 
-        <button class="p-3 text-gray-500 hover:text-white transition"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg></button>
-        <button class="p-3 text-gray-500 hover:text-white transition"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
+        <button class="p-4 text-gray-500 hover:text-white transition"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+        <button class="p-4 text-gray-500 hover:text-white transition"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
     </nav>
 
 </body>
